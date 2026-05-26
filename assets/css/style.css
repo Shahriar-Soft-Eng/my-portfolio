@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Core Styling & Custom variables */
+:root {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Premium Cyberpunk / Game Dev Glowing Palette */
+  --bg-primary: #020617; /* Slate-950 */
+  --bg-secondary: #0b1329; /* Deep cosmic blue */
+  --bg-card: rgba(15, 23, 42, 0.65); /* Glassmorphic Slate */
+  --border-glow: rgba(6, 182, 212, 0.15); /* Soft cyan */
+
+  /* Neon Glow Accents */
+  --glow-cyan: #06b6d4;
+  --glow-emerald: #10b981;
+  --glow-violet: #8b5cf6;
+  --glow-fuchsia: #d946ef;
+  --glow-amber: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: #f1f5f9; /* Slate-100 */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 99px;
+  border: 2px solid #020617;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Background Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(6, 182, 212, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Cyber Neon Glowing Effects */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.text-glow-emerald {
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.6), 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.text-glow-violet {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.text-glow-fuchsia {
+  text-shadow: 0 0 10px rgba(217, 70, 239, 0.6), 0 0 20px rgba(217, 70, 239, 0.3);
+}
+
+.neon-border-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+}
+
+.neon-border-emerald {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.neon-border-fuchsia {
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.2);
+  border: 1px solid rgba(217, 70, 239, 0.4);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.4));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(6, 182, 212, 0.8));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Rhythmic bounce classes */
+.hover-scale-effect {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hover-scale-effect:hover {
+  transform: scale(1.03);
+}
+
+/* Retro AI Console Styles */
+.console-container {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  background: #030712;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.console-header {
+  background: #0f172a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.console-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.console-dots span:nth-child(1) { background: #ef4444; }
+.console-dots span:nth-child(2) { background: #eab308; }
+.console-dots span:nth-child(3) { background: #22c55e; }
+
+.console-body {
+  padding: 16px;
+  height: 320px;
+  overflow-y: auto;
+  color: #a78bfa; /* Violet-400 */
+}
+
+.console-input-row {
+  display: flex;
+  align-items: center;
+  color: #38bdf8;
+  margin-top: 8px;
+}
+
+.console-caret {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: #38bdf8;
+  animation: blink 1s infinite steps(2, start);
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Tic-Tac-Glow styles */
+.ttt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+}
+
+.ttt-cell {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: var(--font-heading);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ttt-cell:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: inset 0 0 12px rgba(6, 182, 212, 0.1);
+}
+
+.ttt-cell.cell-x {
+  color: var(--glow-cyan);
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.8), 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+.ttt-cell.cell-o {
+  color: var(--glow-fuchsia);
+  text-shadow: 0 0 10px rgba(217, 70, 239, 0.8), 0 0 20px rgba(217, 70, 239, 0.4);
+}
+
+.ttt-cell.winning-cell {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: var(--glow-emerald);
+  color: var(--glow-emerald) !important;
+  text-shadow: 0 0 15px rgba(16, 185, 129, 0.9), 0 0 25px rgba(16, 185, 129, 0.5) !important;
+  animation: winningPulse 1s infinite alternate;
+}
+
+@keyframes winningPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* Interactive Timeline Styles */
+.timeline-item {
+  position: relative;
+  padding-left: 32px;
+  border-left: 2px solid rgba(139, 92, 246, 0.2);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--glow-violet);
+  box-shadow: 0 0 10px var(--glow-violet);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--glow-cyan);
+  box-shadow: 0 0 15px var(--glow-cyan);
+  transform: scale(1.2);
+}
+
+/* Skill Tree nodes */
+.skill-badge {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+.skill-badge:hover {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.3);
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------------- */
+/* ATS-FRIENDLY RESUME & PRINT STYLING SYSTEM           */
+/* ---------------------------------------------------- */
+
+/* Hidden container by default */
+#ats-resume-container {
+  display: none;
+}
+
+/* When the body has .ats-mode, we completely change the site visual */
+body.ats-mode {
+  background: #ffffff !important;
+  color: #111827 !important; /* Cool gray 900 */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  overflow-y: auto !important;
+}
+
+body.ats-mode #particle-canvas,
+body.ats-mode nav,
+body.ats-mode header,
+body.ats-mode section:not(#ats-resume-wrapper),
+body.ats-mode footer,
+body.ats-mode .non-ats-element {
+  display: none !important;
+}
+
+body.ats-mode #ats-resume-container {
+  display: block !important;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  background: #ffffff !important;
+}
+
+/* Print Overrides (Triggers when user prints CMD+P / CTRL+P, even if not toggled!) */
+@media print {
+  /* Hide all dynamic web content */
+  #particle-canvas,
+  nav,
+  header,
+  section:not(#ats-resume-wrapper),
+  footer,
+  .non-ats-element,
+  .print-toggle-btn {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+  }
+
+  #ats-resume-container {
+    display: block !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000000 !important;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  /* Clear and standard margins */
+  @page {
+    size: letter;
+    margin: 0.5in 0.6in;
+  }
+}
+
+/* Styling internal elements of the ATS Resume format (Web and Print identical layout) */
+.ats-header {
+  text-align: center;
+  border-bottom: 2px solid #1f2937;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.ats-name {
+  font-size: 24pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111827;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.ats-title {
+  font-size: 13pt;
+  font-weight: 600;
+  color: #4b5563; /* Slate grey */
+  margin-bottom: 8px;
+}
+
+.ats-meta {
+  font-size: 9.5pt;
+  color: #374151;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ats-section-title {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #9ca3af;
+  color: #111827;
+  padding-bottom: 3px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.ats-summary {
+  font-size: 10pt;
+  color: #1f2937;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.ats-skill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 9.5pt;
+  margin-bottom: 12px;
+}
+
+.ats-skill-cat {
+  margin-bottom: 6px;
+}
+
+.ats-skill-label {
+  font-weight: 700;
+  color: #111827;
+}
+
+.ats-xp-item {
+  margin-bottom: 14px;
+}
+
+.ats-xp-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 10pt;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.ats-xp-sub {
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  font-size: 9.5pt;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.ats-bullet-list {
+  list-style-type: square;
+  margin-left: 18px;
+  font-size: 9.5pt;
+  color: #1f2937;
+}
+
+.ats-bullet-list li {
+  margin-bottom: 3px;
+  text-align: justify;
+}
+
+.ats-edu-item, .ats-cert-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9.5pt;
+  margin-bottom: 4px;
+  color: #1f2937;
+}

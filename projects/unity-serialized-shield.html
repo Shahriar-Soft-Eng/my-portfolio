@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Unity Serialized Shield - Dynamic refactoring attribute injector designed 100% autonomously by AI workflows.">
+  <title>Unity Serialized Shield | Project Deep Dive</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              950: '#020617',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Share main styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <style>
+    /* Modify relative assets pathing */
+    body {
+      background-color: #020617;
+    }
+    .code-glow {
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+    }
+  </style>
+</head>
+<body class="relative min-h-screen text-slate-100 selection:bg-cyan-500 selection:text-slate-900 overflow-x-hidden">
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <main class="relative z-10 max-w-5xl mx-auto px-6 py-16 space-y-16">
+    
+    <!-- Header & Navigation back -->
+    <div class="flex items-center justify-between">
+      <a href="../index.html" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white font-bold text-xs transition-all duration-200">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        <span>Back to Portfolio</span>
+      </a>
+      
+      <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+        Project Node: 0x01A
+      </span>
+    </div>
+
+    <!-- Title Hero -->
+    <div class="space-y-6 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-fuchsia-500/10 border border-fuchsia-500/20 mx-auto">
+        <span class="w-2 h-2 rounded-full bg-fuchsia-400 animate-ping"></span>
+        <span class="text-xs font-mono font-bold text-fuchsia-400 uppercase tracking-widest">100% Autonomous AI-Made</span>
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-none text-glow-violet">
+        Unity Serialized Shield
+      </h1>
+      
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        A developer-tooling solution for C# AST manipulation that dynamically preserves Unity serialization bindings during major refactoring operations.
+      </p>
+
+      <div class="flex justify-center space-x-4 pt-2">
+        <a href="https://github.com/AlphaBoysLab/unity-serialized-shield" target="_blank" class="px-5 py-3 rounded-2xl bg-gradient-to-r from-violet-500 to-fuchsia-500 text-slate-950 font-extrabold text-sm hover:from-violet-400 hover:to-fuchsia-400 shadow-lg shadow-violet-500/25 transition-all duration-300 flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>Inspect Source Repository</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- The Problem & The Solution Grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- Left: The Problem -->
+      <div class="glass-panel rounded-3xl p-8 border border-slate-800 space-y-4">
+        <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-white">The Refactoring Glitch</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          In Unity game development, field names directly map to asset serialization files (.prefab, .unity, .asset). When a programmer renames a serialized C# variable (e.g. changing <code>scoreLimit</code> to <code>maxScore</code>):
+        </p>
+        <ul class="list-disc pl-5 text-xs text-slate-400 space-y-2">
+          <li>Unity loses the matching serialized keys, silently resetting data states.</li>
+          <li>Enemy attributes, structural links, and game configurations corrupt.</li>
+          <li>Dev teams lose hundreds of active hours re-inputting inspector values.</li>
+        </ul>
+      </div>
+
+      <!-- Right: The Solution -->
+      <div class="glass-panel rounded-3xl p-8 border border-slate-800 space-y-4">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-white">The Serialized Shield</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Serialized Shield listens to file change streams. When a variable name edit is executed, the AST Synthesizer analyzes standard fields, automatically injecting Unity's native recovery attribute:
+        </p>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-850 font-mono text-[11px] text-cyan-400">
+          [FormerlySerializedAs("scoreLimit")]<br>
+          private int maxScore;
+        </div>
+        <p class="text-xs text-slate-400">
+          This preserves serialization mappings perfectly. Re-imported scripts load existing data states with zero asset breaks.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- AI Dev Workflow Walkthrough -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-white flex items-center">
+        <span class="text-fuchsia-400 font-mono mr-2">&lt;02&gt;</span>
+        <span>The Autonomous AI Workflow</span>
+      </h2>
+      
+      <div class="glass-panel rounded-3xl p-8 border border-slate-800 space-y-6">
+        <p class="text-sm text-slate-300 leading-relaxed">
+          What makes this project unique is its construction method. **Unity Serialized Shield was developed 100% autonomously by AI agents**, acting under my rigorous prompt architectures and logical parameters.
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="space-y-2">
+            <h4 class="text-sm font-bold text-white font-mono">1. Prompt Pipelines</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Designed logical specification flows outlining VS Code AST event lifecycles, and parsing boundaries.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-sm font-bold text-white font-mono">2. Iterative Debugging</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Allowed autonomous compilation loops to read syntax exceptions, dynamically correcting regular expression trees.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <h4 class="text-sm font-bold text-white font-mono">3. Production Packaging</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Automated standard unit tests and generated clean NPM package manifests ready for direct release profiles.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-violet-950/20 border border-violet-500/20 text-xs text-violet-300 italic">
+          "This project serves as absolute proof of my capabilities to design high-quality prompt systems, leverage Model Context Protocols (MCP), and harness autonomous engineering frameworks to compile fully shippable technical products."
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Block Highlights -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-white flex items-center">
+        <span class="text-cyan-400 font-mono mr-2">&lt;03&gt;</span>
+        <span>AST Syntax Architecture</span>
+      </h2>
+
+      <div class="glass-panel rounded-3xl p-6 md:p-8 border border-slate-800 code-glow">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs text-slate-500 font-mono select-none">TypeScript / extension.ts</span>
+          <span class="text-xs px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-400 font-mono">C# AST Hook</span>
+        </div>
+        
+        <!-- Code snippet block -->
+        <pre class="bg-slate-950 p-6 rounded-2xl border border-slate-900 text-xs md:text-sm font-mono text-cyan-400 overflow-x-auto leading-relaxed"><code>// Detect rename operation in C# Syntax tree and inject FormerlySerializedAs
+export function registerRenameHook(context: vscode.ExtensionContext) {
+  vscode.workspace.onDidChangeTextDocument((event) => {
+    const changes = event.contentChanges;
+    const document = event.document;
+
+    if (document.languageId !== 'csharp') return;
+
+    for (const change of changes) {
+      const match = detectVariableRename(change.text, document);
+      if (match) {
+        injectSerializationShield(document, match.line, match.oldName);
+      }
+    }
+  });
+}</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 glass-panel border-t border-slate-900 bg-slate-950/80 py-12 px-6 text-center mt-32">
+    <div class="max-w-5xl mx-auto space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-white">MD Shahriar Islam</p>
+      <p class="text-xs text-slate-500 font-mono">
+        Unity Serialized Shield Showcase. 2026.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Background script -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
