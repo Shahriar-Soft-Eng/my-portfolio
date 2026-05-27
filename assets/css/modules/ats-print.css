@@ -16,8 +16,7 @@ body.ats-mode {
 }
 
 body.ats-mode #particle-canvas,
-body.ats-mode header,
-body.ats-mode section:not(#ats-resume-wrapper),
+body.ats-mode main,
 body.ats-mode footer,
 body.ats-mode .non-ats-element,
 body.ats-mode .theme-toggle-btn {
@@ -50,9 +49,9 @@ body.ats-mode #ats-resume-container {
 @media print {
   /* Hide all dynamic web content */
   #particle-canvas,
+  main,
   nav,
   header,
-  section:not(#ats-resume-wrapper),
   footer,
   .non-ats-element,
   .print-toggle-btn,
@@ -61,20 +60,31 @@ body.ats-mode #ats-resume-container {
     display: none !important;
   }
 
-  body {
+  html, body {
     background: #ffffff !important;
     color: #000000 !important;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-size: 11pt !important;
     line-height: 1.4 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
   }
 
+  body.ats-mode #ats-resume-container,
   #ats-resume-container {
     display: block !important;
     max-width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
     background: #ffffff !important;
+  }
+
+  #slot-ats-resume {
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   a {
@@ -84,6 +94,16 @@ body.ats-mode #ats-resume-container {
 
   .page-break {
     page-break-before: always;
+  }
+
+  .ats-xp-item,
+  .ats-header,
+  .ats-section-title,
+  .ats-skill-grid,
+  .ats-edu-item,
+  .ats-cert-item {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   /* Clear and standard margins */

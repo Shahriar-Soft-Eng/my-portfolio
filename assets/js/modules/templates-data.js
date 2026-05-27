@@ -758,8 +758,6 @@ export const atsResumeTemplate = `
     </ul>
   </div>
 
-  <div class="page-break"></div>
-
   <!-- BFPE -->
   <div class="ats-xp-item">
     <div class="ats-xp-header">

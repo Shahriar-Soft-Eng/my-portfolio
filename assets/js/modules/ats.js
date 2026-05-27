@@ -10,7 +10,7 @@ export function initAtsToggler() {
   function evalScrollBtn() {
     if (!scrollPrintBtn) return;
     const isAts = document.body.classList.contains('ats-mode');
-    if (isAts && window.scrollY > 300) {
+    if (isAts) {
       scrollPrintBtn.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
       scrollPrintBtn.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
     } else {
@@ -63,9 +63,6 @@ export function initAtsToggler() {
       window.print();
     });
   }
-
-  // Listen to scrolls to dynamically reveal the quick print button
-  window.addEventListener('scroll', evalScrollBtn);
 }
 
 
