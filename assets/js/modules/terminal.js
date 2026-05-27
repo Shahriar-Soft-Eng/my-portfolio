@@ -42,7 +42,6 @@ export function initAiConsole() {
       A monument to high-fidelity AI-assisted engineering and autonomous product release.`,
     contact: `CONNECT PORTALS:<br>
       - Email: <span class="text-cyan-400">shahriar.islam.dev@gmail.com</span><br>
-      - Phone: <span class="text-emerald-400">+8801644854401</span><br>
       - LinkedIn: <span class="underline">linkedin.com/in/shahriar-softwareengineer/</span><br>
       - GitHub: <span class="underline">github.com/Shahriar-Soft-Eng</span>`
   };

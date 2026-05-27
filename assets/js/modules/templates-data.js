@@ -688,8 +688,6 @@ export const atsResumeTemplate = `
     <div class="ats-meta">
       <span>Dhaka, Bangladesh</span>
       <span>•</span>
-      <span>+8801644854401</span>
-      <span>•</span>
       <span>shahriar.islam.dev@gmail.com</span>
       <span>•</span>
       <span><a

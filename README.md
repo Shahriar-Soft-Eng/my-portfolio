@@ -133,4 +133,3 @@ Since this entire website is compiled with lightweight, super high-performance, 
 * **Email:** [shahriar.islam.dev@gmail.com](mailto:shahriar.islam.dev@gmail.com)
 * **LinkedIn:** [linkedin.com/in/shahriar-softwareengineer](https://linkedin.com/in/shahriar-softwareengineer/)
 * **GitHub:** [github.com/Shahriar-Soft-Eng](https://github.com/Shahriar-Soft-Eng)
-* **Contact Phone:** [+8801644854401](tel:+8801644854401)
