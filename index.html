@@ -58,7 +58,13 @@
     </div>
 
     <!-- Toggle Action (Web to ATS) -->
-    <div class="hidden md:flex items-center space-x-4">
+    <div class="hidden md:flex items-center space-x-3">
+      <button class="theme-toggle-btn p-2.5 rounded-xl border border-slate-800 bg-slate-950/40 text-cyan-400 hover:text-cyan-300 hover:border-cyan-500/30 transition-all duration-200 flex items-center justify-center" aria-label="Toggle Day/Night Theme">
+        <!-- Sun SVG by default (Dark mode active) -->
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+        </svg>
+      </button>
       <button
         class="print-toggle-btn px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-bold text-xs hover:from-cyan-400 hover:to-emerald-400 shadow-lg shadow-cyan-500/25 transition-all duration-300 flex items-center">
         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,12 +75,21 @@
       </button>
     </div>
 
-    <!-- Mobile menu button -->
-    <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-400 hover:text-white transition-colors duration-200">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="M4 6h16M4 12h16m-7 6h7" />
-      </svg>
-    </button>
+    <!-- Mobile actions container -->
+    <div class="flex lg:hidden items-center space-x-2">
+      <button class="theme-toggle-btn p-2 text-slate-400 hover:text-white transition-colors duration-200 flex items-center justify-center" aria-label="Toggle Day/Night Theme">
+        <!-- Sun SVG by default (Dark mode active) -->
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+        </svg>
+      </button>
+      <button id="mobile-menu-btn" class="p-2 text-slate-400 hover:text-white transition-colors duration-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
 
     <!-- Mobile Nav list -->
     <div id="mobile-nav-menu"

@@ -3,6 +3,7 @@
  * ES Module Imports mapping single-responsibility modules cleanly.
  */
 import { initTemplates } from './modules/templates.js';
+import { initThemeToggler } from './modules/theme.js';
 import { initExperienceStats } from './modules/stats.js';
 import { initParticleBackground } from './modules/particles.js';
 import { initAiConsole } from './modules/terminal.js';
@@ -19,7 +20,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log("[Bootstrapper] Templates successfully mounted to slots. Bootstrapping features...");
   
     // 2. Bootstrap all operational components once DOM slots are populated
+    initThemeToggler();
     initExperienceStats();
+
     initParticleBackground();
     initAiConsole();
     initTicTacGlow();

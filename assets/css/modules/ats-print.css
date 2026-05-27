@@ -19,7 +19,8 @@ body.ats-mode #particle-canvas,
 body.ats-mode header,
 body.ats-mode section:not(#ats-resume-wrapper),
 body.ats-mode footer,
-body.ats-mode .non-ats-element {
+body.ats-mode .non-ats-element,
+body.ats-mode .theme-toggle-btn {
   display: none !important;
 }
 
@@ -55,7 +56,8 @@ body.ats-mode #ats-resume-container {
   footer,
   .non-ats-element,
   .print-toggle-btn,
-  #ats-scroll-print-btn {
+  #ats-scroll-print-btn,
+  .theme-toggle-btn {
     display: none !important;
   }
 
