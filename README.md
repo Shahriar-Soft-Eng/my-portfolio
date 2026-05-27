@@ -8,7 +8,7 @@ A premium, interactive, cyber-glowing portfolio website designed for game develo
 
 1. **Embedded Tic-Tac-Glow Minigame:** Fully interactive, responsive board utilizing raw Web Audio oscillator synthesizers (zero external assets required) and a smart **Minimax AI opponent** with humanized mistake ratios. A direct showcase of the core engineering behind the 100M+ download title *Tic Tac Glow: 2 Player*.
 2. **Retro AI Agent Terminal Console:** Typewriter-driven zsh shell simulation allowing recruiters to click quick-prompts (`about`, `skills`, `experience`, `shield`, `contact`) or type manual queries to inspect MD Shahriar's technical matrices.
-3. **Interactive RPG Skill Tree:** High-fidelity categorizations covering Decoupled Systems (SOLID, DI, Service Locators), Engines (Unity3D, Cocos2dx), AI-Driven Automation (MCP, Autonomous Pipelines), and Multiplayer frameworks (Photon Fusion, WebRTC).
+3. **Interactive RPG Skill Tree:** High-fidelity categorizations covering Advanced Unity Architecture (DOTS/ECS/Burst), Low-Level C# & Memory (Span<T>), Multiplayer & Real-Time Networks, Graphics & Rendering, External SDKs (XR/Quest 3/Web3), and AI Custom Editor Tooling.
 4. **Dynamic Projects Showcase:** High-performance filtering maps parsing `data/projects.json` seamlessly to render responsive glassmorphic cards with smooth entrance curves.
 5. **ATS-Compliant PDF Resume Converter:** 1-click toggling strips cosmetic particles, radial gradients, and console frames instantly, transitioning the viewport into a standard corporate black-and-white template. Direct media queries force this structure automatically when triggering standard prints (`Ctrl+P` / `Cmd+P`) to download a pixel-perfect, scanner-scannable resume.
 

@@ -21,11 +21,11 @@ export function initAiConsole() {
       "I believe in writing clean, self-documenting code structured on SOLID principles. My development architecture utilizes modern Dependency Injection patterns, loose coupling, and Context-Based Service Locators to build high-performance mobile systems."<br><br>
       Lately, I have mastered incorporating advanced AI prompting models, MCP servers, and autonomous agents into my IDE workspace to deliver production-ready software packages with unprecedented efficiency.`,
     skills: `TECHNICAL MATRICES:<br>
-      [<span class="text-cyan-400">Languages</span>] C#, C++, C, Java, JavaScript, Python, Node.js<br>
-      [<span class="text-emerald-400">Game Engines</span>] Unity3D (Core), Cocos2dX, ImpactJS, URP pipelines<br>
-      [<span class="text-violet-400">Systems & DI</span>] SOLID Core, Clean Architecture, Dependency Injection, Service Locators<br>
-      [<span class="text-fuchsia-400">Networking</span>] Photon Fusion, WebRTC, Node.js Signalers, WebSockets, AWS EC2<br>
-      [<span class="text-amber-400">AI Automation</span>] Model Context Protocol, LLM autonomous codebases, R&D prompt pipelines`,
+      [<span class="text-cyan-400">Unity DOTS/ECS</span>] Pro architecture, C# Jobs, Burst Compiler high-framerate systems<br>
+      [<span class="text-emerald-400">Low-Level C#</span>] Span&lt;T&gt;, Memory&lt;T&gt;, IL2CPP memory optimization & multithreading<br>
+      [<span class="text-violet-400">Multiplayer & Web</span>] Photon Fusion, Netcode (NGO), Colyseus real-time frameworks, WebGL/WebGPU<br>
+      [<span class="text-fuchsia-400">Graphics & XR</span>] URP/HDRP, Custom HLSL Shaders, VFX Graph, Quest 3 Spatial OpenXR<br>
+      [<span class="text-amber-400">Tooling & AI</span>] SOLID & DI, Custom Editor Tooling Pipelines, Model Context Protocol R&D`,
     experience: `CAREER TIERS:<br>
       1. <span class="text-cyan-400">Arclite Systems Ltd.</span> (Apr 2025 - Present) | Software Engineer<br>
          - System modernization and UI revamp of Tic Tac Toe Glow (100M+ downloads) using SOLID refactoring and custom Odin tooling.<br>
