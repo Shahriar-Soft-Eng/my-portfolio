@@ -1,0 +1,13 @@
+/* Main compiler stylesheet - MD Shahriar Islam Portfolio */
+
+/* 1. Base theme elements & globals */
+@import url('./modules/theme.css');
+
+/* 2. Retro AI shell terminal styling */
+@import url('./modules/terminal.css');
+
+/* 3. Interactive neon tictac cells */
+@import url('./modules/tictac.css');
+
+/* 4. Corporate print CV override layout */
+@import url('./modules/ats-print.css');

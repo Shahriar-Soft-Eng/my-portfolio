@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="MD Shahriar Islam - Portfolio. Software Engineer specializing in Unity3D, Mobile Game Development (100M+ Downloads), and AI-Driven Autonomous Engineering.">
+  <meta name="author" content="MD Shahriar Islam">
+  <meta name="theme-color" content="#020617">
+
+  <title>MD Shahriar Islam | Unity3D & AI-Driven Software Engineer</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              950: '#020617',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="relative min-h-screen text-slate-100 selection:bg-cyan-500 selection:text-slate-900">
+
+  <!-- Background Particle Network Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Sticky Visual Navigation -->
+  <nav
+    class="sticky top-0 z-50 glass-panel border-b border-slate-800/80 bg-slate-950/70 py-4 px-6 md:px-12 flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center">
+        <span class="text-cyan-400 font-mono mr-1.5">&lt;</span>
+        <span>shahriar.dev</span>
+        <span class="text-cyan-400 font-mono ml-1.5">/&gt;</span>
+      </a>
+    </div>
+
+    <!-- Desktop links -->
+    <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-300">
+      <a href="#about" class="hover:text-cyan-400 transition-colors duration-250">Console</a>
+      <a href="#tictac" class="hover:text-cyan-400 transition-colors duration-250">Tic-Tac-Glow</a>
+      <a href="#skills" class="hover:text-cyan-400 transition-colors duration-250">Skills Tree</a>
+      <a href="#projects" class="hover:text-cyan-400 transition-colors duration-250">Projects</a>
+      <a href="#experience" class="hover:text-cyan-400 transition-colors duration-250">Timeline</a>
+      <a href="#education" class="hover:text-cyan-400 transition-colors duration-250">Credentials</a>
+    </div>
+
+    <!-- Toggle Action (Web to ATS) -->
+    <div class="hidden md:flex items-center space-x-3">
+      <button class="theme-toggle-btn p-2.5 rounded-xl border border-slate-800 bg-slate-950/40 text-cyan-400 hover:text-cyan-300 hover:border-cyan-500/30 transition-all duration-200 flex items-center justify-center" aria-label="Toggle Day/Night Theme">
+        <!-- Sun SVG by default (Dark mode active) -->
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+        </svg>
+      </button>
+      <button
+        class="print-toggle-btn px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-slate-950 font-bold text-xs hover:from-cyan-400 hover:to-emerald-400 shadow-lg shadow-cyan-500/25 transition-all duration-300 flex items-center">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        <span>ATS Resume View</span>
+      </button>
+    </div>
+
+    <!-- Mobile actions container -->
+    <div class="flex lg:hidden items-center space-x-2">
+      <button class="theme-toggle-btn p-2 text-slate-400 hover:text-white transition-colors duration-200 flex items-center justify-center" aria-label="Toggle Day/Night Theme">
+        <!-- Sun SVG by default (Dark mode active) -->
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+        </svg>
+      </button>
+      <button id="mobile-menu-btn" class="p-2 text-slate-400 hover:text-white transition-colors duration-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.1" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+
+    <!-- Mobile Nav list -->
+    <div id="mobile-nav-menu"
+      class="hidden absolute top-full left-0 w-full flex-col bg-slate-950/95 border-b border-slate-800 p-6 space-y-4 text-center lg:hidden">
+      <a href="#about" class="text-slate-300 font-semibold hover:text-cyan-400">Console</a>
+      <a href="#tictac" class="text-slate-300 font-semibold hover:text-cyan-400">Tic-Tac-Glow</a>
+      <a href="#skills" class="text-slate-300 font-semibold hover:text-cyan-400">Skills Tree</a>
+      <a href="#projects" class="text-slate-300 font-semibold hover:text-cyan-400">Projects</a>
+      <a href="#experience" class="text-slate-300 font-semibold hover:text-cyan-400">Timeline</a>
+      <a href="#education" class="text-slate-300 font-semibold hover:text-cyan-400">Credentials</a>
+
+      <button
+        class="print-toggle-btn w-full justify-center px-4 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-bold text-sm shadow-md flex items-center">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        <span>ATS Resume View</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Web Content Frame -->
+  <main class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-12 space-y-32">
+    <!-- SLOT: About/Hero/CLI Console -->
+    <div id="slot-about"></div>
+
+    <!-- SLOT: Playable Tic-Tac-Glow Minigame -->
+    <div id="slot-tictac"></div>
+
+    <!-- SLOT: Technical Skills Tree -->
+    <div id="slot-skills"></div>
+
+    <!-- SLOT: Projects Showcase Grid -->
+    <div id="slot-projects"></div>
+
+    <!-- SLOT: Career Timeline & Specifications -->
+    <div id="slot-experience"></div>
+
+    <!-- SLOT: Academic Background & Certifications -->
+    <div id="slot-credentials"></div>
+  </main>
+
+
+  <!-- Sleek Circular Floating Quick Print Button (Active in ATS Mode on Scroll) -->
+  <button id="ats-scroll-print-btn"
+          aria-label="Print Resume"
+          class="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-slate-950/95 text-cyan-400 border border-slate-800 hover:text-cyan-300 hover:border-cyan-500/40 shadow-2xl transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none flex items-center justify-center hover:scale-110 active:scale-95">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+    </svg>
+  </button>
+
+  <!-- Sleek Circular Floating Back to Top Button (Active in Normal Mode on Scroll) -->
+  <button id="back-to-top-btn"
+          aria-label="Back to Top"
+          class="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-slate-950/95 text-cyan-400 border border-slate-800 hover:text-cyan-300 hover:border-cyan-500/40 shadow-2xl transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none flex items-center justify-center hover:scale-110 active:scale-95 non-ats-element">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+
+
+  <!-- Main visual Web Footer -->
+  <footer
+    class="relative z-10 glass-panel border-t border-slate-900 bg-slate-950/80 py-12 px-6 text-center non-ats-element">
+    <div class="max-w-5xl mx-auto space-y-4">
+      <p class="text-sm font-semibold tracking-wide text-white">MD Shahriar Islam</p>
+      <p class="text-xs text-slate-500 font-mono">
+        Designed & Engineered by MD Shahriar Islam • Guided by SOLID Architecture & Immersive Systems
+      </p>
+      <div class="flex justify-center space-x-6 pt-4 text-xs font-mono text-slate-400">
+        <span>C# • Unity3D • AI Agent • SOLID</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SLOT: ATS Corporate Compliant CV Target -->
+  <div id="slot-ats-resume"></div>
+
+  <!-- Page Loader/Main script binding -->
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>

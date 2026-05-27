@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Core Styling & Custom variables */
+:root {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Premium Cyberpunk / Game Dev Glowing Palette */
+  --bg-primary: #020617; /* Slate-950 */
+  --bg-secondary: #0b1329; /* Deep cosmic blue */
+  --bg-card: rgba(15, 23, 42, 0.65); /* Glassmorphic Slate */
+  --border-glow: rgba(6, 182, 212, 0.15); /* Soft cyan */
+
+  /* Neon Glow Accents */
+  --glow-cyan: #06b6d4;
+  --glow-emerald: #10b981;
+  --glow-violet: #8b5cf6;
+  --glow-fuchsia: #d946ef;
+  --glow-amber: #f59e0b;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: #f1f5f9; /* Slate-100 */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 99px;
+  border: 2px solid #020617;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Background Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(6, 182, 212, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Cyber Neon Glowing Effects */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.text-glow-emerald {
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.6), 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.text-glow-violet {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.text-glow-fuchsia {
+  text-shadow: 0 0 10px rgba(217, 70, 239, 0.6), 0 0 20px rgba(217, 70, 239, 0.3);
+}
+
+.neon-border-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+}
+
+.neon-border-emerald {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.neon-border-fuchsia {
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.2);
+  border: 1px solid rgba(217, 70, 239, 0.4);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.4));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(6, 182, 212, 0.8));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Rhythmic bounce classes */
+.hover-scale-effect {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hover-scale-effect:hover {
+  transform: scale(1.03);
+}
+
+/* Interactive Timeline Styles */
+.timeline-item {
+  position: relative;
+  padding-left: 32px;
+  border-left: 2px solid rgba(139, 92, 246, 0.2);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--glow-violet);
+  box-shadow: 0 0 10px var(--glow-violet);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--glow-cyan);
+  box-shadow: 0 0 15px var(--glow-cyan);
+  transform: scale(1.2);
+}
+
+/* Skill Tree nodes */
+.skill-badge {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+.skill-badge:hover {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.3);
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------------- */
+/* LIGHT THEME (DAY MODE) SYSTEM                        */
+/* ---------------------------------------------------- */
+body.light-theme {
+  --bg-primary: #f1f5f9; /* Slate-100 */
+  --bg-secondary: #e2e8f0; /* Slate-200 */
+  --bg-card: rgba(255, 255, 255, 0.78); /* High-fidelity light glass panel */
+  --border-glow: rgba(14, 165, 233, 0.12);
+  --text-primary: #0f172a; /* Slate-900 */
+  --text-secondary: #334155; /* Slate-700 */
+  --text-white: #0f172a;
+  background: radial-gradient(circle at 10% 20%, #e0f2fe 0%, #f8fafc 90%) !important; /* Premium dimensional soft sky radial glow background */
+  background-color: #f8fafc !important;
+  color: var(--text-primary);
+}
+
+/* Override text color utilities for standard containers */
+body.light-theme .text-white,
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
+  color: #0f172a !important;
+}
+
+body.light-theme .text-slate-100 {
+  color: #0f172a !important;
+}
+
+body.light-theme .text-slate-300 {
+  color: #334155 !important;
+}
+
+body.light-theme .text-slate-400 {
+  color: #475569 !important;
+}
+
+body.light-theme .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* High contrast overrides for timeline highlight game titles */
+body.light-theme .text-cyan-300 {
+  color: #0284c7 !important; /* High contrast Sky-600 */
+  font-weight: 700;
+}
+
+body.light-theme .text-emerald-300 {
+  color: #059669 !important; /* High contrast Emerald-600 */
+  font-weight: 700;
+}
+
+body.light-theme .glass-panel {
+  background: var(--bg-card);
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.05);
+  color: #334155 !important;
+}
+
+body.light-theme .glass-panel:hover {
+  border-color: rgba(14, 165, 233, 0.35);
+  box-shadow: 0 12px 40px 0 rgba(14, 165, 233, 0.08);
+  color: #0f172a !important;
+}
+
+body.light-theme nav {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+body.light-theme nav a {
+  color: #334155 !important;
+}
+
+body.light-theme nav a:hover {
+  color: #0ea5e9 !important;
+}
+
+body.light-theme footer {
+  background: rgba(241, 245, 249, 0.9) !important;
+  border-top-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+body.light-theme footer p,
+body.light-theme footer div {
+  color: #475569 !important;
+}
+
+body.light-theme footer span {
+  color: #64748b !important;
+}
+
+/* Light Mode AI Terminal overrides */
+body.light-theme .console-container {
+  background: #ffffff;
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.1);
+}
+
+body.light-theme .console-header {
+  background: #f1f5f9;
+  border-bottom-color: rgba(15, 23, 42, 0.06);
+}
+
+body.light-theme .console-body {
+  color: #6d28d9; /* Deep royal violet output */
+}
+
+/* Terminal output color classes overrides for high readability */
+body.light-theme .console-body .text-cyan-400 {
+  color: #0284c7 !important; /* Sky-600 */
+}
+
+body.light-theme .console-body .text-violet-400 {
+  color: #7c3aed !important; /* Violet-600 */
+}
+
+body.light-theme .console-body .text-emerald-400 {
+  color: #059669 !important; /* Emerald-600 */
+}
+
+body.light-theme .console-body .text-slate-400 {
+  color: #475569 !important; /* Slate-600 */
+}
+
+body.light-theme .console-input-row {
+  background-color: #f1f5f9 !important; /* Light slate bottom row */
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
+  color: #0369a1 !important; /* Sky-700 input text prefix */
+}
+
+body.light-theme .console-caret {
+  background-color: #0369a1;
+}
+
+body.light-theme #console-input {
+  color: #0f172a !important;
+}
+
+body.light-theme .console-header .text-slate-500 {
+  color: #475569 !important;
+}
+
+/* AI Console quick command buttons overrides */
+body.light-theme .console-container button {
+  background-color: #ffffff !important;
+  color: #7c3aed !important; /* Deep violet */
+  border-color: #cbd5e1 !important;
+}
+
+body.light-theme .console-container button:hover {
+  background-color: #f5f3ff !important;
+  border-color: #a78bfa !important;
+  color: #6d28d9 !important;
+}
+
+/* Light Mode Project filter tab styling overrides */
+body.light-theme .project-filter-btn {
+  background-color: #ffffff !important;
+  color: #475569 !important;
+  border-color: #cbd5e1 !important;
+}
+
+body.light-theme .project-filter-btn[class*="bg-cyan-500"] {
+  background-color: #06b6d4 !important;
+  color: #ffffff !important;
+  border-color: #0891b2 !important;
+}
+
+body.light-theme .project-filter-btn:hover {
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+
+/* Light Mode Technology Badges overrides in Project Cards */
+body.light-theme .glass-panel span.font-mono {
+  background-color: rgba(241, 245, 249, 0.8) !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+  color: #475569 !important;
+}
+
+/* Light Mode Project Card CTA Link Buttons overrides */
+body.light-theme .glass-panel a[class*="bg-gradient-to-r"] {
+  background: linear-gradient(to right, #f8fafc, #f1f5f9) !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03) !important;
+}
+
+body.light-theme .glass-panel a[class*="bg-gradient-to-r"]:hover {
+  background: linear-gradient(to right, rgba(14, 165, 233, 0.08), rgba(14, 165, 233, 0.12)) !important;
+  border-color: #0ea5e9 !important;
+  color: #0ea5e9 !important;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.1) !important;
+}
+
+/* Skill badges light theme */
+body.light-theme .skill-badge {
+  background: rgba(241, 245, 249, 0.8);
+  border-color: rgba(15, 23, 42, 0.05);
+  color: #334155 !important;
+}
+
+body.light-theme .skill-badge:hover {
+  background: rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.3);
+  color: #0ea5e9 !important;
+}
+
+/* Tic Tac Glow light mode overrides */
+body.light-theme .ttt-cell {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: inset 0 0 15px rgba(14, 165, 233, 0.02) !important;
+}
+
+body.light-theme .ttt-cell:hover {
+  background: rgba(14, 165, 233, 0.06) !important;
+  border-color: #0ea5e9 !important;
+}
+
+body.light-theme #ttt-reset {
+  background-color: #ffffff !important;
+  color: #334155 !important;
+  border-color: #cbd5e1 !important;
+}
+
+body.light-theme #ttt-reset:hover {
+  background-color: #f8fafc !important;
+  border-color: #94a3b8 !important;
+  color: #0f172a !important;
+}
+
+/* Floating Scroll buttons light theme */
+body.light-theme #ats-scroll-print-btn,
+body.light-theme #back-to-top-btn {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #0369a1 !important; /* Sky-700 */
+  border-color: rgba(14, 165, 233, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.12) !important;
+}
+
+body.light-theme #ats-scroll-print-btn:hover,
+body.light-theme #back-to-top-btn:hover {
+  background-color: #ffffff !important;
+  color: #0ea5e9 !important;
+  border-color: #0ea5e9 !important;
+}
+

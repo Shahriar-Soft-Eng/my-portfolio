@@ -1,0 +1,154 @@
+[
+  {
+    "id": "serialized-shield",
+    "title": "Unity Serialized Shield",
+    "category": "ai-tools",
+    "platform": "VS Code & VS Marketplace | Open Source",
+    "engine": "C# AST Parsing & TypeScript Extension",
+    "tagline": "100% Autonomous AI-developed refactoring extension for Unity serialization integrity.",
+    "description": "Architected and delivered a complete developer-tooling solution that dynamically applies the [FormerlySerializedAs] attribute to C# variables renamed within IDEs. This prevents broken serialized data in Unity assets during refactoring, reducing data loss by 100%. Developed entirely via autonomous AI agents under precise architectural guidance.",
+    "features": [
+      "Dynamic AST parser detecting renamed private serialized fields in real-time.",
+      "Available on the VS Code and Visual Studio Marketplace for direct, one-click developer workspace integration.",
+      "No-compile AST structural analysis utilizing high-efficiency regex and syntactic mapping.",
+      "Ensures zero broken prefab references or data corruption in large-scale teams."
+    ],
+    "link": "https://github.com/AlphaBoysLab/unity-serialized-shield",
+    "linkLabel": "GitHub Repository",
+    "stack": ["TypeScript", "C#", "AST Parser", "VS Code API", "AI Autonomous Workflows"],
+    "badge": "AI & Developer Tool"
+  },
+  {
+    "id": "tictactoe-glow",
+    "title": "Tic Tac Toe Glow",
+    "category": "game-dev",
+    "platform": "Android & iOS | 100M+ Downloads",
+    "engine": "Unity3D / C# / URP",
+    "tagline": "Spearheading system modernization and UI revamp for a global mobile title hit.",
+    "description": "Acting as a core engineer migrating legacy architectures into scalable, high-performance systems. Solved complex performance bottlenecks on mobile devices, implemented comprehensive game mechanics, and styled highly optimized render custom shaders.",
+    "features": [
+      "Architectural Refactoring: Resolved bottlenecks by enforcing SOLID principles, increasing runtime efficiency.",
+      "Tooling & Workflow: Designed advanced Odin Custom Editors to streamline developer asset mapping.",
+      "Core Systems Engineering: End-to-end design of Quests, Daily Rewards, Inventory, Shop Systems, and secure IAP.",
+      "Adaptive UI Framework: Engineered a fully responsive layout supporting multiple target resolutions at 60 FPS."
+    ],
+    "link": "https://play.google.com/store/apps/details?id=com.arcsys.tictactoe",
+    "linkLabel": "Google Play Store",
+    "stack": ["Unity3D", "C#", "Odin Inspector", "SOLID Core", "URP Shaders", "IAP Integration"],
+    "badge": "100M+ Downloads Hit"
+  },
+  {
+    "id": "twentynine-card",
+    "title": "29 Classic: Offline Card Games",
+    "category": "game-dev",
+    "platform": "Android | 10K+ Downloads | 4.6 Stars",
+    "engine": "Unity3D / C#",
+    "tagline": "Key developer scaling offline multiplayer card architectures and player experiences.",
+    "description": "Led core system development, engineered complex offline card AI structures, and created a highly responsive, polished graphic layout ensuring zero-lag synchronization.",
+    "features": [
+      "Implemented advanced matchmaking AI heuristics and local game state calculators.",
+      "Designed a highly polished, responsive, and tactile gameplay UI layout.",
+      "Optimized data footprint and serialized files to ensure instant boot time.",
+      "Continuously deployed live gameplay tweaks based on user retention analytics."
+    ],
+    "link": "https://play.google.com/store/apps/details?id=com.pixellab.tweentynine",
+    "linkLabel": "Google Play Store",
+    "stack": ["Unity3D", "C#", "Card AI Heuristics", "Tactile UI Design", "Serialization Systems"],
+    "badge": "Key Developer Card"
+  },
+  {
+    "id": "cameleon-erp",
+    "title": "Cameleon 3D ERP",
+    "category": "game-dev",
+    "platform": "WebXR / VR & AR Simulation Platforms",
+    "engine": "Unity3D / WebRTC / Node.js",
+    "tagline": "Backbone developer of a 3D Metaverse ERP combining Virtual Reality and digital twins.",
+    "description": "Developed and secured core systems for high-fidelity industrial VR simulators. Linked operational SCADA and IoT real-time databases into simulated virtual metaverse environments.",
+    "features": [
+      "Engineered real-time render streaming of VR assets straight to web interfaces.",
+      "Built multi-user spatial communications utilizing WebRTC and custom Node.js signaling.",
+      "Deployed secure, encrypted Universal Database readers via Node.js WebSocket servers.",
+      "Maintained scalable simulator infrastructure hosted on Amazon Web Services EC2."
+    ],
+    "link": "https://www.cameleon.vision/",
+    "linkLabel": "Cameleon Vision Portal",
+    "stack": ["Unity3D", "WebXR", "WebRTC", "Node.js Signalers", "WebSockets", "Amazon EC2"],
+    "badge": "Industrial VR Sim"
+  },
+  {
+    "id": "dragon-village",
+    "title": "Dragon Village",
+    "category": "game-dev",
+    "platform": "Android & iOS | 5M+ Downloads | 4.5 Stars",
+    "engine": "Unity3D / C#",
+    "tagline": "Leading clicker simulation with 5 Million downloads worldwide.",
+    "description": "Engineered core progression layers, crossbreeding multiplier mathematics, and integrated high-conversion marketing modules to drive global user acquisition.",
+    "features": [
+      "Structured progression states supporting over 100 elemental dragon classes.",
+      "Optimized clicker resource calculations, eliminating double-precision floating math errors.",
+      "Integrated secure ad suites and remote configurations (Unity Ads, Firebase).",
+      "Created highly converting visual interactive marketing assets via Luna SDK."
+    ],
+    "link": "https://play.google.com/store/apps/details?id=com.tappocket.dragonvillage&hl=en",
+    "linkLabel": "Google Play Store",
+    "stack": ["Unity3D", "C#", "Progression Engines", "Luna SDK", "F2P Monetization"],
+    "badge": "5M+ Downloads Hit"
+  },
+  {
+    "id": "jurassic-sniper",
+    "title": "Jurassic Sniper 3D",
+    "category": "game-dev",
+    "platform": "iOS | 4.5 Stars",
+    "engine": "Unity3D / C# / Luna SDK",
+    "tagline": "Gameplay enhancer and UA marketing ad developer for high-traffic iOS titles.",
+    "description": "Engineered responsive 3D weapon physics, customized visual feedback, and developed playable ad environments on Apple App Store.",
+    "features": [
+      "Refined 3D projectile calculations and raycasting layouts for rapid action gameplay.",
+      "Designed a highly polished, sleek mobile visual feedback system (UI/UX).",
+      "Utilized Luna SDK to bridge C# code with lightweight web-friendly playable ads.",
+      "Drove significant organic user acquisition with responsive web assets."
+    ],
+    "link": "https://apps.apple.com/ma/app/jurassic-sniper-3d/id1535441769",
+    "linkLabel": "Apple App Store",
+    "stack": ["Unity3D", "C#", "Luna SDK", "Playable Ads", "iOS Optimization"],
+    "badge": "iOS Hit Developer"
+  },
+  {
+    "id": "jurassic-sea",
+    "title": "Jurassic Sea Attack",
+    "category": "game-dev",
+    "platform": "Android | 1M+ Downloads | 4.3 Stars",
+    "engine": "Unity3D / C# / Luna SDK",
+    "tagline": "Core framework engineer and high-performance playable ad developer.",
+    "description": "Enhanced existing core physics layers, integrated polished visual feedback UI frameworks, and engineered high-retention playable marketing ads.",
+    "features": [
+      "Enhanced standard physics equations to manage multiple aquatic entities seamlessly.",
+      "Designed a highly polished, tactile, and responsive user feedback layout.",
+      "Developed high-performance interactive ads translating sniper physics to web engines.",
+      "Optimized client-side packages to reduce download size constraints on low-end units."
+    ],
+    "link": "https://play.google.com/store/apps/details?id=com.tappocket.squishyfishy&hl=en",
+    "linkLabel": "Google Play Store",
+    "stack": ["Unity3D", "C#", "Luna SDK", "Aquatic Physics", "Playable Ads"],
+    "badge": "1M+ Downloads Hit"
+  },
+  {
+    "id": "edit-me",
+    "title": "Edit Me (Text Editor)",
+    "category": "desktop-apps",
+    "platform": "Windows Desktop App",
+    "engine": "Java Swing / NetBeans IDE",
+    "tagline": "Lightweight, highly customizable Java-based rich text editor.",
+    "description": "Created a lightweight text editing interface featuring an integrated file directory navigator. Includes color styling sheets, multiple theme packs, font scaling systems, and custom UTF-8 encoding support.",
+    "features": [
+      "Built-in file explorer tree parsing directory locations seamlessly.",
+      "Seven preconfigured graphical interface skins (Light, Dark, Slate, and Custom).",
+      "Dynamic background, selection, and character color palettes.",
+      "Search-and-replace algorithm and HTML/CSS syntax formatter plugins."
+    ],
+    "link": "https://www.softpedia.com/get/Office-tools/Text-editors/Edit-Me.shtml#disqus_thread",
+    "linkLabel": "Softpedia Download",
+    "stack": ["Java", "Java Swing", "NetBeans IDE", "File System Trees", "Theme Engines"],
+    "badge": "Java Swing Desktop"
+  }
+]

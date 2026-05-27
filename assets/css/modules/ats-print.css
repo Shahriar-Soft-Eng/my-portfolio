@@ -1,0 +1,225 @@
+/* ---------------------------------------------------- */
+/* ATS-FRIENDLY RESUME & PRINT STYLING SYSTEM           */
+/* ---------------------------------------------------- */
+
+/* Hidden container by default */
+#ats-resume-container {
+  display: none;
+}
+
+/* When the body has .ats-mode, we completely change the site visual */
+body.ats-mode {
+  background: #ffffff !important;
+  color: #111827 !important; /* Cool gray 900 */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  overflow-y: auto !important;
+}
+
+body.ats-mode #particle-canvas,
+body.ats-mode main,
+body.ats-mode footer,
+body.ats-mode .non-ats-element,
+body.ats-mode .theme-toggle-btn {
+  display: none !important;
+}
+
+/* Retain nav in screen-mode with lightweight corporate slate theme */
+body.ats-mode nav {
+  background: rgba(248, 250, 252, 0.95) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  backdrop-blur: none !important;
+}
+body.ats-mode nav a {
+  color: #334155 !important;
+}
+body.ats-mode nav a:hover {
+  color: #0ea5e9 !important;
+}
+
+body.ats-mode #ats-resume-container {
+  display: block !important;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  background: #ffffff !important;
+}
+
+/* Print Overrides (Triggers when user prints CMD+P / CTRL+P, even if not toggled!) */
+@media print {
+  /* Hide all dynamic web content */
+  #particle-canvas,
+  main,
+  nav,
+  header,
+  footer,
+  .non-ats-element,
+  .print-toggle-btn,
+  #ats-scroll-print-btn,
+  .theme-toggle-btn {
+    display: none !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.ats-mode #ats-resume-container,
+  #ats-resume-container {
+    display: block !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+  }
+
+  #slot-ats-resume {
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000000 !important;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .ats-xp-item,
+  .ats-header,
+  .ats-section-title,
+  .ats-skill-grid,
+  .ats-edu-item,
+  .ats-cert-item {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Clear and standard margins */
+  @page {
+    size: letter;
+    margin: 0.5in 0.6in;
+  }
+}
+
+/* Styling internal elements of the ATS Resume format (Web and Print identical layout) */
+.ats-header {
+  text-align: center;
+  border-bottom: 2px solid #1f2937;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.ats-name {
+  font-size: 24pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111827;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.ats-title {
+  font-size: 13pt;
+  font-weight: 600;
+  color: #4b5563; /* Slate grey */
+  margin-bottom: 8px;
+}
+
+.ats-meta {
+  font-size: 9.5pt;
+  color: #374151;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ats-section-title {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #9ca3af;
+  color: #111827;
+  padding-bottom: 3px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.ats-summary {
+  font-size: 10pt;
+  color: #1f2937;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.ats-skill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 9.5pt;
+  margin-bottom: 12px;
+}
+
+.ats-skill-cat {
+  margin-bottom: 6px;
+}
+
+.ats-skill-label {
+  font-weight: 700;
+  color: #111827;
+}
+
+.ats-xp-item {
+  margin-bottom: 14px;
+}
+
+.ats-xp-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 10pt;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.ats-xp-sub {
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  font-size: 9.5pt;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.ats-bullet-list {
+  list-style-type: square;
+  margin-left: 18px;
+  font-size: 9.5pt;
+  color: #1f2937;
+}
+
+.ats-bullet-list li {
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+.ats-edu-item, .ats-cert-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9.5pt;
+  margin-bottom: 4px;
+  color: #1f2937;
+}

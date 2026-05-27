@@ -1,0 +1,31 @@
+<!-- FEATURED PROJECTS VIEW -->
+<section id="projects" class="space-y-12">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+    <div class="space-y-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white">Shipped Projects</h2>
+      <p class="text-sm text-slate-400 max-w-xl">Explore our game development releases, custom AI engineering
+        platforms, and utility engines.</p>
+    </div>
+
+    <!-- Filter Tab Buttons -->
+    <div class="flex flex-wrap gap-2 bg-slate-950 p-1.5 rounded-2xl border border-slate-850 self-start">
+      <button data-filter="all"
+        class="project-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 bg-cyan-500 text-slate-950 border border-cyan-400">All
+        Nodes</button>
+      <button data-filter="game-dev"
+        class="project-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 bg-slate-900 text-slate-400 border border-slate-800 hover:text-white">Game
+        Development</button>
+      <button data-filter="ai-tools"
+        class="project-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 bg-slate-900 text-slate-400 border border-slate-800 hover:text-white">AI
+        Tools & Open Source</button>
+      <button data-filter="desktop-apps"
+        class="project-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 bg-slate-900 text-slate-400 border border-slate-800 hover:text-white">Desktop
+        Applications</button>
+    </div>
+  </div>
+
+  <!-- Dynamically filled by main.js -->
+  <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="col-span-full text-center py-12 font-mono text-slate-500">Querying project directories...</div>
+  </div>
+</section>

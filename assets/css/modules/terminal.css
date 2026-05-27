@@ -1,0 +1,60 @@
+/* Retro AI Console Styles */
+.console-container {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  background: #030712;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.console-header {
+  background: #0f172a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.console-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.console-dots span:nth-child(1) { background: #ef4444; }
+.console-dots span:nth-child(2) { background: #eab308; }
+.console-dots span:nth-child(3) { background: #22c55e; }
+
+.console-body {
+  padding: 16px;
+  height: 320px;
+  overflow-y: auto;
+  color: #a78bfa; /* Violet-400 */
+}
+
+.console-input-row {
+  display: flex;
+  align-items: center;
+  color: #38bdf8;
+  margin-top: 8px;
+}
+
+.console-caret {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: #38bdf8;
+  animation: blink 1s infinite steps(2, start);
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
