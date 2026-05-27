@@ -16,12 +16,25 @@ body.ats-mode {
 }
 
 body.ats-mode #particle-canvas,
-body.ats-mode nav,
 body.ats-mode header,
 body.ats-mode section:not(#ats-resume-wrapper),
 body.ats-mode footer,
 body.ats-mode .non-ats-element {
   display: none !important;
+}
+
+/* Retain nav in screen-mode with lightweight corporate slate theme */
+body.ats-mode nav {
+  background: rgba(248, 250, 252, 0.95) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  backdrop-blur: none !important;
+}
+body.ats-mode nav a {
+  color: #334155 !important;
+}
+body.ats-mode nav a:hover {
+  color: #0ea5e9 !important;
 }
 
 body.ats-mode #ats-resume-container {
@@ -41,7 +54,8 @@ body.ats-mode #ats-resume-container {
   section:not(#ats-resume-wrapper),
   footer,
   .non-ats-element,
-  .print-toggle-btn {
+  .print-toggle-btn,
+  #ats-scroll-print-btn {
     display: none !important;
   }
 
