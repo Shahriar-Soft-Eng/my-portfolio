@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Core Styling & Custom variables */
+:root {
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Premium Cyberpunk / Game Dev Glowing Palette */
+  --bg-primary: #020617; /* Slate-950 */
+  --bg-secondary: #0b1329; /* Deep cosmic blue */
+  --bg-card: rgba(15, 23, 42, 0.65); /* Glassmorphic Slate */
+  --border-glow: rgba(6, 182, 212, 0.15); /* Soft cyan */
+
+  /* Neon Glow Accents */
+  --glow-cyan: #06b6d4;
+  --glow-emerald: #10b981;
+  --glow-violet: #8b5cf6;
+  --glow-fuchsia: #d946ef;
+  --glow-amber: #f59e0b;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: #f1f5f9; /* Slate-100 */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 99px;
+  border: 2px solid #020617;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Background Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(6, 182, 212, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Cyber Neon Glowing Effects */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.text-glow-emerald {
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.6), 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.text-glow-violet {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.text-glow-fuchsia {
+  text-shadow: 0 0 10px rgba(217, 70, 239, 0.6), 0 0 20px rgba(217, 70, 239, 0.3);
+}
+
+.neon-border-cyan {
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+}
+
+.neon-border-emerald {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.neon-border-fuchsia {
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.2);
+  border: 1px solid rgba(217, 70, 239, 0.4);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.4));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(6, 182, 212, 0.8));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Rhythmic bounce classes */
+.hover-scale-effect {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hover-scale-effect:hover {
+  transform: scale(1.03);
+}
+
+/* Interactive Timeline Styles */
+.timeline-item {
+  position: relative;
+  padding-left: 32px;
+  border-left: 2px solid rgba(139, 92, 246, 0.2);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--glow-violet);
+  box-shadow: 0 0 10px var(--glow-violet);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--glow-cyan);
+  box-shadow: 0 0 15px var(--glow-cyan);
+  transform: scale(1.2);
+}
+
+/* Skill Tree nodes */
+.skill-badge {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+.skill-badge:hover {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.3);
+  transform: translateY(-1px);
+}

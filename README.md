@@ -46,4 +46,4 @@ Since this entire website is compiled with lightweight, super high-performance, 
 
 ---
 
-*Compiled 100% Autonomously with Antigravity AI IDE.*
+*Designed & Engineered by MD Shahriar Islam — Unity3D & AI-Driven Software Architect.*

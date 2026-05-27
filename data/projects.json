@@ -3,13 +3,13 @@
     "id": "serialized-shield",
     "title": "Unity Serialized Shield",
     "category": "ai-tools",
-    "platform": "Open Source & Developer Tooling",
+    "platform": "VS Code & VS Marketplace | Open Source",
     "engine": "C# AST Parsing & TypeScript Extension",
     "tagline": "100% Autonomous AI-developed refactoring extension for Unity serialization integrity.",
     "description": "Architected and delivered a complete developer-tooling solution that dynamically applies the [FormerlySerializedAs] attribute to C# variables renamed within IDEs. This prevents broken serialized data in Unity assets during refactoring, reducing data loss by 100%. Developed entirely via autonomous AI agents under precise architectural guidance.",
     "features": [
       "Dynamic AST parser detecting renamed private serialized fields in real-time.",
-      "VS Code automation extension applying standard Unity attributes instantly.",
+      "Available on the VS Code and Visual Studio Marketplace for direct, one-click developer workspace integration.",
       "No-compile AST structural analysis utilizing high-efficiency regex and syntactic mapping.",
       "Ensures zero broken prefab references or data corruption in large-scale teams."
     ],
@@ -19,99 +19,118 @@
     "badge": "AI & Developer Tool"
   },
   {
-    "id": "dragon-care",
-    "title": "Dragon Care (3D)",
+    "id": "tictactoe-glow",
+    "title": "Tic Tac Toe Glow",
     "category": "game-dev",
-    "platform": "Android & iOS",
-    "engine": "Unity3D",
-    "tagline": "Immersive pet-caring dragon simulation with cute 3D elements and dynamic evolutions.",
-    "description": "Step into the mythical dragon world. Nurture adorable 3D dragons from adolescence to coming of age. Feed, play, bathe, and guide their path—your choices determine whether they grow up to be noble protectors or devious pranksters! Designed with interactive events like Christmas, Valentine's Day, and Halloween.",
+    "platform": "Android & iOS | 100M+ Downloads",
+    "engine": "Unity3D / C# / URP",
+    "tagline": "Spearheading system modernization and UI revamp for a global mobile title hit.",
+    "description": "Acting as a core engineer migrating legacy architectures into scalable, high-performance systems. Solved complex performance bottlenecks on mobile devices, implemented comprehensive game mechanics, and styled highly optimized render custom shaders.",
     "features": [
-      "Dynamic dragon evolution tree driven by user behavioral decisions.",
-      "Engaging 3D simulation loops featuring high-performance URP rendering and lighting.",
-      "Interactive seasonal events, mini-games, and customizable dragon habitats.",
-      "Optimized assets and memory structures to run at 60 FPS on mid-range devices."
+      "Architectural Refactoring: Resolved bottlenecks by enforcing SOLID principles, increasing runtime efficiency.",
+      "Tooling & Workflow: Designed advanced Odin Custom Editors to streamline developer asset mapping.",
+      "Core Systems Engineering: End-to-end design of Quests, Daily Rewards, Inventory, Shop Systems, and secure IAP.",
+      "Adaptive UI Framework: Engineered a fully responsive layout supporting multiple target resolutions at 60 FPS."
     ],
-    "link": "https://play.google.com/store/apps/details?id=com.funvai.dragoncare",
+    "link": "https://play.google.com/store/apps/details?id=com.arcsys.tictactoe",
     "linkLabel": "Google Play Store",
-    "stack": ["Unity3D", "C#", "URP", "UI Toolkit", "Dynamic Evolution UI"],
-    "badge": "3D Simulation Game"
+    "stack": ["Unity3D", "C#", "Odin Inspector", "SOLID Core", "URP Shaders", "IAP Integration"],
+    "badge": "100M+ Downloads Hit"
+  },
+  {
+    "id": "twentynine-card",
+    "title": "29 Classic: Offline Card Games",
+    "category": "game-dev",
+    "platform": "Android | 10K+ Downloads | 4.6 Stars",
+    "engine": "Unity3D / C#",
+    "tagline": "Key developer scaling offline multiplayer card architectures and player experiences.",
+    "description": "Led core system development, engineered complex offline card AI structures, and created a highly responsive, polished graphic layout ensuring zero-lag synchronization.",
+    "features": [
+      "Implemented advanced matchmaking AI heuristics and local game state calculators.",
+      "Designed a highly polished, responsive, and tactile gameplay UI layout.",
+      "Optimized data footprint and serialized files to ensure instant boot time.",
+      "Continuously deployed live gameplay tweaks based on user retention analytics."
+    ],
+    "link": "https://play.google.com/store/apps/details?id=com.pixellab.tweentynine",
+    "linkLabel": "Google Play Store",
+    "stack": ["Unity3D", "C#", "Card AI Heuristics", "Tactile UI Design", "Serialization Systems"],
+    "badge": "Key Developer Card"
+  },
+  {
+    "id": "cameleon-erp",
+    "title": "Cameleon 3D ERP",
+    "category": "game-dev",
+    "platform": "WebXR / VR & AR Simulation Platforms",
+    "engine": "Unity3D / WebRTC / Node.js",
+    "tagline": "Backbone developer of a 3D Metaverse ERP combining Virtual Reality and digital twins.",
+    "description": "Developed and secured core systems for high-fidelity industrial VR simulators. Linked operational SCADA and IoT real-time databases into simulated virtual metaverse environments.",
+    "features": [
+      "Engineered real-time render streaming of VR assets straight to web interfaces.",
+      "Built multi-user spatial communications utilizing WebRTC and custom Node.js signaling.",
+      "Deployed secure, encrypted Universal Database readers via Node.js WebSocket servers.",
+      "Maintained scalable simulator infrastructure hosted on Amazon Web Services EC2."
+    ],
+    "link": "https://www.cameleon.vision/",
+    "linkLabel": "Cameleon Vision Portal",
+    "stack": ["Unity3D", "WebXR", "WebRTC", "Node.js Signalers", "WebSockets", "Amazon EC2"],
+    "badge": "Industrial VR Sim"
   },
   {
     "id": "dragon-village",
-    "title": "Dragon Village (2D)",
+    "title": "Dragon Village",
     "category": "game-dev",
-    "platform": "Android & iOS | 5M+ Downloads",
-    "engine": "Unity3D",
-    "tagline": "Leading idle farming & clicker experience with over 5 Million downloads worldwide.",
-    "description": "Discovered elements, crossbred mythical creatures, mined resources, and led powerful dragons into battles. Contributed to core feature implementations, playable ads optimization, and third-party monetization loops, driving active user retention.",
+    "platform": "Android & iOS | 5M+ Downloads | 4.5 Stars",
+    "engine": "Unity3D / C#",
+    "tagline": "Leading clicker simulation with 5 Million downloads worldwide.",
+    "description": "Engineered core progression layers, crossbreeding multiplier mathematics, and integrated high-conversion marketing modules to drive global user acquisition.",
     "features": [
-      "Manage more than 100 unique elemental dragons with fully automated resource mining.",
-      "Crossbreed system generating custom hybrid eggs and elemental variations.",
-      "High-converting interactive playable ads developed via Luna SDK.",
-      "Real-time resource balance engine running on local database architectures."
+      "Structured progression states supporting over 100 elemental dragon classes.",
+      "Optimized clicker resource calculations, eliminating double-precision floating math errors.",
+      "Integrated secure ad suites and remote configurations (Unity Ads, Firebase).",
+      "Created highly converting visual interactive marketing assets via Luna SDK."
     ],
-    "link": "https://play.google.com/store/apps/details?id=com.tappocket.dragonvillage",
+    "link": "https://play.google.com/store/apps/details?id=com.tappocket.dragonvillage&hl=en",
     "linkLabel": "Google Play Store",
-    "stack": ["Unity3D", "C#", "Luna SDK", "Playable Ads", "F2P Monetization"],
+    "stack": ["Unity3D", "C#", "Progression Engines", "Luna SDK", "F2P Monetization"],
     "badge": "5M+ Downloads Hit"
   },
   {
-    "id": "idle-dragon-miner",
-    "title": "Idle Dragon Miner (3D)",
+    "id": "jurassic-sniper",
+    "title": "Jurassic Sniper 3D",
     "category": "game-dev",
-    "platform": "Android & iOS",
-    "engine": "Unity3D",
-    "tagline": "Scale your golden mining empire with powerful, adorable 3D dragons.",
-    "description": "Construct multiple mines, assign powerful dragons to automate operations, and gather offline income. Experience a high-fidelity 3D simulation with responsive, game-loop optimized UI layouts and satisfying reward mechanics.",
+    "platform": "iOS | 4.5 Stars",
+    "engine": "Unity3D / C# / Luna SDK",
+    "tagline": "Gameplay enhancer and UA marketing ad developer for high-traffic iOS titles.",
+    "description": "Engineered responsive 3D weapon physics, customized visual feedback, and developed playable ad environments on Apple App Store.",
     "features": [
-      "Automated idle income accumulation using secure client-side save state verification.",
-      "Evolving dragon miners transitioning from hatchlings to legendary gargantuan gatherers.",
-      "Stunning 3D lighting, particle effects, and customized low-poly environment design.",
-      "Dynamic scaling mathematics balancing upgrades, multipliers, and reward rates."
+      "Refined 3D projectile calculations and raycasting layouts for rapid action gameplay.",
+      "Designed a highly polished, sleek mobile visual feedback system (UI/UX).",
+      "Utilized Luna SDK to bridge C# code with lightweight web-friendly playable ads.",
+      "Drove significant organic user acquisition with responsive web assets."
     ],
-    "link": "https://play.google.com/store/apps/details?id=com.funvai.dragonminer3d",
-    "linkLabel": "Google Play Store",
-    "stack": ["Unity3D", "C#", "Low-Poly URP Assets", "Offline State Engine", "Game UI Design"],
-    "badge": "3D Idle Tycoon"
+    "link": "https://apps.apple.com/ma/app/jurassic-sniper-3d/id1535441769",
+    "linkLabel": "Apple App Store",
+    "stack": ["Unity3D", "C#", "Luna SDK", "Playable Ads", "iOS Optimization"],
+    "badge": "iOS Hit Developer"
   },
   {
-    "id": "dragon-forest",
-    "title": "Dragon Forest (3D)",
+    "id": "jurassic-sea",
+    "title": "Jurassic Sea Attack",
     "category": "game-dev",
-    "platform": "Android & iOS",
-    "engine": "Unity3D",
-    "tagline": "Explore mythical forest islands, build bridges, and breathe life into new dragons.",
-    "description": "A relaxed exploration game where you control a character on screen to harvest woods, build path crossings, and establish glowing habitats for newly discovered dragon species.",
+    "platform": "Android | 1M+ Downloads | 4.3 Stars",
+    "engine": "Unity3D / C# / Luna SDK",
+    "tagline": "Core framework engineer and high-performance playable ad developer.",
+    "description": "Enhanced existing core physics layers, integrated polished visual feedback UI frameworks, and engineered high-retention playable marketing ads.",
     "features": [
-      "Super responsive single-finger joystick navigation mechanics.",
-      "Procedurally generated forest modules and expanding island paths.",
-      "Fluid particle configurations representing glowing magic forests and dynamic shadows.",
-      "Optimized rendering batches to keep mobile devices running perfectly cool."
+      "Enhanced standard physics equations to manage multiple aquatic entities seamlessly.",
+      "Designed a highly polished, tactile, and responsive user feedback layout.",
+      "Developed high-performance interactive ads translating sniper physics to web engines.",
+      "Optimized client-side packages to reduce download size constraints on low-end units."
     ],
-    "link": "https://play.google.com/store/apps/details?id=com.funvai.tapfire",
+    "link": "https://play.google.com/store/apps/details?id=com.tappocket.squishyfishy&hl=en",
     "linkLabel": "Google Play Store",
-    "stack": ["Unity3D", "C#", "Batched Rendering", "Mobile Joystick Physics", "URP Particles"],
-    "badge": "3D Adventure Sandbox"
-  },
-  {
-    "id": "shark-attack",
-    "title": "Shark Attack (3D)",
-    "category": "game-dev",
-    "platform": "Android & iOS",
-    "engine": "Unity3D",
-    "tagline": "Feast on beaches, outrun hunters, and rule the ocean deeps.",
-    "description": "Take control of a hungry apex predator in a 3D ocean playground. Swipe to navigate through beaches, consume targets to grow massive, battle enemy sharks, and escape marine police.",
-    "features": [
-      "Fluid, gravity-compensated 3D swimming physics with simple joystick overrides.",
-      "Satisfying ragdoll reactions and responsive target detection algorithms.",
-      "Cinematic dynamic camera zoom tracking action cues.",
-      "Expansive water shaders and custom low-poly underwater environments."
-    ],
-    "link": "https://play.google.com/store/apps/details?id=com.fpg.sharkattack",
-    "linkLabel": "Google Play Store",
-    "stack": ["Unity3D", "C#", "Rigidbody Physics", "Dynamic Camera Controller", "Custom Water Shaders"],
-    "badge": "3D Arcade Action"
+    "stack": ["Unity3D", "C#", "Luna SDK", "Aquatic Physics", "Playable Ads"],
+    "badge": "1M+ Downloads Hit"
   },
   {
     "id": "edit-me",
@@ -127,46 +146,9 @@
       "Dynamic background, selection, and character color palettes.",
       "Search-and-replace algorithm and HTML/CSS syntax formatter plugins."
     ],
-    "link": "https://www.softpedia.com/",
+    "link": "https://www.softpedia.com/get/Office-tools/Text-editors/Edit-Me.shtml#disqus_thread",
     "linkLabel": "Softpedia Download",
     "stack": ["Java", "Java Swing", "NetBeans IDE", "File System Trees", "Theme Engines"],
     "badge": "Java Swing Desktop"
-  },
-  {
-    "id": "check-files",
-    "title": "Check Your Files Activity",
-    "category": "desktop-apps",
-    "platform": "Windows Desktop App",
-    "engine": "Java Swing / File Monitoring APIs",
-    "tagline": "Real-time file modification and integrity scanner.",
-    "description": "Developed an advanced file integrity utility that registers anonymous modifications, writes, or deletions made to selected local files. Helps secure critical file vaults and tracks background process actions.",
-    "features": [
-      "Real-time background listener checking targeted files for content variations.",
-      "Integrity hash tracking indicating detailed modification counts.",
-      "Interactive Java Swing report panel showing file timestamps.",
-      "Simple, highly responsive user interface with low background memory foot-print."
-    ],
-    "link": "https://www.youtube.com/",
-    "linkLabel": "Watch Demo Video",
-    "stack": ["Java", "Java Swing", "File Watcher API", "System Security Tools"],
-    "badge": "Utility Application"
-  },
-  {
-    "id": "hop-casual",
-    "title": "Hop (3D Hyper-Casual)",
-    "category": "game-dev",
-    "platform": "Web & Mobile Mobile Prototypes",
-    "engine": "Unity3D",
-    "tagline": "High-speed arcade rhythmic hop prototype.",
-    "description": "Developed a fast-paced hyper-casual physics prototype built within a narrow timeframe to test rhythmic gameplay mechanics, responsive control curves, and highly engaging visual loops.",
-    "features": [
-      "Highly responsive screen-drag bounce physics and target alignments.",
-      "Glow-enhanced high-contrast assets optimized for immediate visual capture.",
-      "Satisfying sound-responsive visual scaling and color transitions."
-    ],
-    "link": "https://shorturl.at/kpDF4",
-    "linkLabel": "Watch Gameplay",
-    "stack": ["Unity3D", "C#", "Rhythmic Game Loops", "Hyper-casual Physics"],
-    "badge": "3D Mini Game"
   }
 ]
